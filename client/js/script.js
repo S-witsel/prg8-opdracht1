@@ -7,6 +7,9 @@ let currentCharacter = '';
 
 let chathistory = [];
 
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
 
     fetchData('https://www.dnd5eapi.co/api/races', data => racesData = data);
@@ -134,3 +137,37 @@ document.getElementById('chatsubmit').addEventListener('click', async function()
         document.getElementById('chatsubmit').disabled = false;
     }
 });
+
+// document.getElementById('chatsubmitANTHRO').addEventListener('click', async function() {
+//
+//     document.getElementById('chatsubmitANTHRO').disabled = true;
+//
+//     let inputchat = document.getElementById('chatprompt').value;
+//     chathistory.push(["human", inputchat])
+//
+//     try {
+//         const response = await fetch('http://localhost:3000/getResponseANTHRO', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify({ prompt: chathistory.toString()})
+//         });
+//
+//         if (!response.ok) {
+//             throw new Error('Failed to fetch response from the server');
+//         }
+//
+//         const data = await response.json();
+//
+//         documentgetElementById('chatresponse').textContent = data.response;
+//         chathistory.push(["AI", data.response])
+//
+//         console.log(chathistory)
+//
+//     } catch (error) {
+//         console.error('Error:', error);
+//     } finally {
+//         document.getElementById('chatsubmitANTHRO').disabled = false;
+//     }
+// });.
