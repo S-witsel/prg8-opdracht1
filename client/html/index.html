@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script defer src="../js/script.js" type="module"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <p>hallo wereld</p>
+<div id="box1">
+    <h3>Create your own DND Character sheet based on a single prompt!</h3>
+    <p>Your character will be generated based on your given prompt.</p>
     <div id="container">
         <textarea id="prompt" placeholder="Enter your prompt here..."></textarea>
         <button id="submit">Submit</button>
+        <button id="characterReset">Reset Character</button>
         <div id="response"></div>
     </div>
+    <br>
+    <h3>Chat with your generated character!</h3>
+    <p>Ask your new character for example what they would do in a situation.</p>
+    <div id="chatcontainer">
+        <textarea id="chatprompt" placeholder="Enter your prompt here..."></textarea>
+        <button id="chatsubmit">Submit</button>
+        <div id="chatresponse"></div>
+    </div>
+</div>
+
 </body>
 </html>

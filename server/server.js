@@ -11,6 +11,7 @@ const model = new ChatOpenAI({
     azureOpenAIApiVersion: process.env.OPENAI_API_VERSION,
     azureOpenAIApiInstanceName: process.env.INSTANCE_NAME,
     azureOpenAIApiDeploymentName: process.env.ENGINE_NAME,
+    maxRetries: 10,
 })
 
 app.use(express.json());
@@ -18,10 +19,8 @@ app.use(express.json());
 app.post('/getResponse', async (req, res) => {
     try {
         const prompt = req.body.prompt;
-        const engineeredPrompt = `You are an old english speaking gentleman. Anwser the following question: ${prompt}`
 
-        // Use the prompt to generate a response
-        const response = await model.invoke(engineeredPrompt);
+        const response = await model.invoke(prompt);
 
         res.json({ response: response.content });
     } catch (error) {

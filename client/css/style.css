@@ -1,0 +1,35 @@
+#box1{
+    background-color: rosybrown;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#response{
+    background-color: white;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+#chatresponse{
+    background-color: white;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+h3{
+    background-color: bisque;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+p{
+    color: white;
+    border-radius: 10px;
+}
+
+textarea {
+    resize: none;
+}

@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@langchain/core": "^0.1.44",
+    "@langchain/openai": "^0.0.19",
+    "langchain": "^0.1.26",
     "node": "^21.6.2",
     "react": "^18.2.0",
     "vite": "^5.1.4"
